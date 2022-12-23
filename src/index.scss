@@ -1,0 +1,63 @@
+:root {
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+
+  --fw-regular: 400;
+  --fw-bold: 700;
+
+  --ff-base: 'DM Sans', sans-serif;
+
+  --fs-base: 1rem;
+  --fs-paragraph: 0.8rem;
+  --fs-large: 1.5rem;
+
+  --cc-primary-red: hsl(10, 79%, 65%);
+  --cc-primary-cyan: hsl(186, 34%, 60%);
+
+  --cc-secondary-dark-brown: hsl(25, 47%, 15%);
+  --cc-secondary-medium-brown: hsl(28, 10%, 53%);
+  --cc-secondary-cream: hsl(27, 66%, 92%);
+  --cc-secondary-orange: hsl(33, 100%, 98%);
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+body {
+  font-family: var(--ff-base);
+  font-weight: var(--fw-regular);
+  font-size: var(--fs-base);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  background-color: var(--cc-secondary-cream);
+  min-height: 100vh;
+  display: grid;
+  place-content: center;
+  grid-template-columns: 1fr;
+  margin: 1rem;
+}
+
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+input, button, textarea, select {
+  font: inherit;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+#root, #__next {
+  isolation: isolate;
+}

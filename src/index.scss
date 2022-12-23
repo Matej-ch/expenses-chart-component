@@ -43,6 +43,7 @@ body {
   place-content: center;
   grid-template-columns: 1fr;
   margin: 1rem;
+  overflow: hidden;
 }
 
 img, picture, video, canvas, svg {

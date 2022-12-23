@@ -37,7 +37,6 @@
 
   h2 {
     color: var(--cc-secondary-dark-brown);
-    padding-bottom: 2rem;
   }
 
   footer {
@@ -56,10 +55,35 @@
   grid-template-columns: repeat(7, 1fr);
   gap: 0.5rem;
   align-items: baseline;
+  padding-top: 3rem;
+
+  & > div {
+    position: relative;
+  }
+
+  .hover-price {
+    background-color: var(--cc-secondary-dark-brown);
+    color: var(--cc-secondary-orange);
+    border-radius: 4px;
+    padding: 0.25rem;
+    position: absolute;
+    top: -40px;
+    display: none;
+    font-size: var(--fs-paragraph);
+  }
 
   .graph {
     border-radius: 4px;
     background-color: var(--cc-primary-red);
+    cursor: pointer;
+
+    &:hover {
+      opacity: 0.8;
+    }
+
+    &:hover + .hover-price {
+      display: block;
+    }
   }
 
   .graph.today {
@@ -92,5 +116,9 @@
 @media only screen and (min-width: 600px) {
   .chart-graph {
     gap: 1.25rem;
+
+    .hover-price {
+      font-size: var(--fs-base);
+    }
   }
 }

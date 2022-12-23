@@ -11,6 +11,7 @@ function ExpenseChartGraph({expenses}: { expenses: IExpenses[] }) {
             return <div key={index}>
                 <div className={today === expense.day ? 'graph today' : 'graph'}
                      style={{height: height + 'px'}}></div>
+                <span className={'hover-price'}>${expense.amount}</span>
                 <span className={'text-light'}>{expense.day}</span>
             </div>
         })}
